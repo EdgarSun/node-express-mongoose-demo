@@ -1,0 +1,160 @@
+//
+   Created by EdgarSun on 13-12-28.
+
+extends layout/default
+block content
+    .row.row-app.margin-none
+        .col-md-4
+            .box-generic.padding-none.overflow-hidden
+                .innerAll.inner-2x
+                    p.text-large Level 20
+                    .progress
+                        .progress-bar.progress-bar-primary(style="width: 70%;") <strong>Next Level</strong> - <strong class="steps-percent">70%</strong>
+                    .row
+                        .col-md-6
+                            a.widget-stats.widget-stats-gray.widget-stats-2(href="")
+                                span.count 5120
+                                span.txt GP
+                        .col-md-6
+                            a.widget-stats.widget-stats-inverse.widget-stats-2(href="")
+                                span.count 5120
+                                span.txt GP
+                    
+
+
+
+        .col-md-8
+            .col-separator.col-unscrollable
+                .col-table
+                    .row.row-merge.box.margin-none
+                        .col-md-6.col-sm-12.reset-components
+                            .widget.widget-tabs.widget-tabs-icons-only-2.widget-activity.margin-none.widget-activity-social
+                                .widget-head
+                                    ul
+                                        li.active
+                                            a.glyphicons.user(data-toggle="tab",href="#shareTab")
+                                                i
+                                        li
+                                            a.glyphicons.webcam(data-toggle="tab",href="#webcamTab")
+                                                i
+                                        li
+                                            a.glyphicons.picture(data-toggle="tab",href="#pictureTab")
+                                                i
+                                        li
+                                            a.glyphicons.link(data-toggle="tab",href="#linkTab")
+                                                i
+                                .widget-body.padding-none
+                                    .tab-content
+                                        #shareTab.tab-pane.active
+                                            .share
+                                                textarea.form-control(rows="2",placeholder="Share what you've been to...")
+                                                a.btn.btn-primary.btn-sm Submit
+                                        #webcamTab.tab-pane.innerAll.text-center
+                                            h4 Share webcam
+                                            p Voteb would like to start your webcam.
+                                            button.btn.btn-primary
+                                                i.fa.fa-video-camera
+                                                |Allow
+                                            button.btn.btn-danger
+                                                i.fa.fa-ban
+                                        #pictureTab.tab-pane.innerAll Picture
+                                        #linkTab.tab-pane
+                                            .share
+                                                textarea.form-control(rows="2",placeholder="Share a link...")
+                                                a.btn.btn-default Share
+                        .col-md-6.col-sm-12
+                            .heading-buttons.innerLR.border-bottom
+                                h5.pull-left.margin-none Friends Online
+                                    i.fa.fa-circle.text-success.fa-fw
+                                .dropdown.pull-right.dropdown-icons.dropdown-icons-xs
+                                    a.btn.btn-default.btn-stroke.btn-circle.dropdown-toggle(data-toggle="dropdown",href="#")
+                                        i.fa.fa-eye
+                                    ul.dropdown-menu
+                                        li(data-toggle="tooltip",data-title="Online",data-placement="left",data-container="body")
+                                            a(href="#")
+                                                i.fa.fa-circle
+                                        li(data-toggle="tooltip",data-title="Offnline",data-placement="left",data-container="body")
+                                            a(href="#")
+                                                i.fa.fa-circle-o
+                                .clearfix
+                            .slim-scroll(data-scroll-height="120px")
+                                #friendlist.innerAll
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/1.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/1.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/2.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/2.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/3.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/3.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/4.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/4.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/5.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/5.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/6.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/6.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/7.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/7.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/8.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/8.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/9.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/9.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/10.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/10.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/11.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/11.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/12.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/12.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/13.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/13.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/14.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/14.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/15.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/15.jpg",alt="photo",width="35")
+                                    //- a.innerAll.half.pull-left.border-none(data-toggle="image-preview",data-title="Lorem ipsum",data-content="<small>Last Activity: 1h ago</small>",data-image-preview="/default/assets/images/people/250/16.jpg",width="100",href="#")
+                                    //-     img(src="/default/assets/images/people/80/16.jpg",alt="photo",width="35")
+                                    //.clearfix
+                    .col-separator-h
+                    .col-table-row
+                        .col-app.box.col-unscrollable.overflow-hidden
+                            .col-table
+                                .innerLR.heading-buttons.border-bottom
+                                    h4.margin-none.pull-left Recent Activiy
+                                    .btn-group.btn-group-xs.pull-right
+                                        button.btn.btn-default.filled
+                                            i.fa.fa-refresh
+                                        button.btn.btn-default
+                                            i.fa.fa-cog
+                                    .clearfix
+                                .col-table-row
+                                    .col-app.col-unscrollable
+                                        .col-app
+                                            .timeline-activity.list-unstyled
+                                                li.active
+                                                    i.list-icon.fa.fa-share
+                                                    .block.block-inline
+                                                        .caret
+                                                        .box-generic
+                                                            .timeline-top-info.content-filled.border-bottom
+                                                                a(href="#")
+                                                                    img(src="/default/assets/images/people/80/2.jpg",alt="photo",width="20")
+                                                                a.col-margin-h-1(href="") EdgarSun
+                                                                | won a match
+                                                                a.col-margin-h-1.text-primary(href="") Strik At Karkand
+                                                                | from the challenge by
+                                                                a.col-margin-h-1(href="#")
+                                                                    img(src="/default/assets/images/people/80/8.jpg",alt="photo",width="20")
+                                                                a(href="#") Shiraz
+                                                                .timeline-bottom
+                                                                    i.fa.fa-clock-o 2 days ago
+                                                            .media.innerAll.margin-none
+                                                                a.pull-left(href="#")
+                                                                    img.media-object(src="/default/assets/images/people/80/8.jpg",lt="photo",width="35")
+                                                                .media-body
+                                                                    a.col-margin-right-1.strong(href="") Shiraz
+                                                                    | Good Job!
+                                                                    .timeline-bottom
+                                                                        i.fa.fa-clock-o 2 days ago
+
+
+
+
+

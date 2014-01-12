@@ -11,6 +11,7 @@ var async = require('async')
 var users = require('../app/controllers/users')
   , articles = require('../app/controllers/articles')
   , auth = require('./middlewares/authorization')
+  , reports = require('../app/controllers/reports')
 
 /**
  * Route middlewares
@@ -24,6 +25,10 @@ var commentAuth = [auth.requiresLogin, auth.comment.hasAuthorization]
  */
 
 module.exports = function (app, passport) {
+
+
+  //Reports
+  app.get('/reports/:changelist', reports.show)
 
   // user routes
   app.get('/login', users.login)

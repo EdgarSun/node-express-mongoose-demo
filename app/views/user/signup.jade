@@ -1,0 +1,33 @@
+extends ../layout/sp_default
+
+block content
+    .layout-app
+        .row.row-app
+            .col-separator.col-unscrollable.box
+                .col-table
+                    h4.innerAll.margin-none.border-bottom.text-center
+                        | Create a new Account
+
+                    .col-table-row
+                        .col-app.col-unscrollable
+                            .col-app
+                                .login
+                                    .placeholder.text-center
+                                        i.fa.fa-pencil
+                                    .panel.panel-default.col-sm-6.col-sm-offset-3
+                                        .panel-body
+                                            form(role="form",action="/signup", method="post")
+                                                input(type='hidden', name='_csrf', value="#{csrf_token}")
+                                                .form-group
+                                                    label(for="exampleInputEmail1") Full Name
+                                                    input#exampleInputEmail1.form-control(type="text",placeholder="User Name",name="username")
+                                                .form-group
+                                                    label(for="exampleInputEmail1") Email address
+                                                    input#exampleInputEmail1.form-control(type="email",placeholder="Enter email",name="email")
+                                                .form-group
+                                                    label(for="exampleInputPassword1") Password
+                                                    input#exampleInputPassword1.form-control(type="password",placeholder="Password",name="password")
+                                                .form-group
+                                                    label(for="exampleInputPassword1") Confirm Password
+                                                    input#exampleInputPassword1.form-control(type="password",placeholder="Confirm Password",name="conformPassword")
+                                                button.btn.btn-primary.btn-block(type="submit") Create Account

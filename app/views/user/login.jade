@@ -1,0 +1,35 @@
+extends ../layout/sp_default
+
+block content
+    .layout-app
+        .row.row-app
+            .col-separator.col-unscrollable.box
+                .col-table
+                    h4.innerAll.margin-none.border-bottom.text-center
+                        | Login to your Account
+
+                    .col-table-row
+                        .col-app.col-unscrollable
+                            .col-app
+                                .login
+                                    .placeholder.text-center
+                                        i.fa.fa-lock
+                                    .panel.panel-default.col-sm-6.col-sm-offset-3
+                                        .panel-body
+                                            form(role="form",action="/login", method="post")
+                                                input(type='hidden', name='_csrf', value="#{csrf_token}")
+                                                .form-group
+                                                    label(for="exampleInputEmail1") Email address
+                                                    input#exampleInputEmail1.form-control(type="email",placeholder="Enter email",name="email")
+                                                .form-group
+                                                    label(for="exampleInputPassword1") Password
+                                                    input#exampleInputPassword1.form-control(type="password",placeholder="Password",name="password")
+                                                button.btn.btn-primary.btn-block(type="submit") Login
+                                                .checkbox
+                                                    label
+                                                        input(type="checkbox")
+                                                        | Remember me
+                                    .col-sm-2.col-sm-4.col-sm-offset-4.text-center
+                                        a.btn.btn-info(href="/signup")
+                                            | Create a new account?
+                                            i.fa.fa-pencil

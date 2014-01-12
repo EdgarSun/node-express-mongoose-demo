@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7 app"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8 app"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9 app"> <![endif]-->
+<!--[if gt IE 8]> <html class="ie app"> <![endif]-->
+<!--[if !IE]><!--><html class=""><!-- <![endif]-->
+
+include ../include/head
+
+block head_css
+    link(rel="stylesheet", href="/default/assets/css/admin/module.admin.page.charts.layout_fixed.true.min.css")
+block head_script
+    include ../include/head_script
+body
+    .container-fluid.menu-hidden.menu-right-hidden
+        #content
+            block content
+    .clearfix
+    include ../include/bottom
+    
+    include ../include/foot
+        block foot_script
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.resize.js')
+
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.tooltip.min.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotcharts.common.js')
+            //script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-simple.init.js')
+            script(src='/js/flot/report.line.chart.general.js')
+            script(src='/js/flot/report.line.fill.chart.js')
+
+
+
+            //script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-line.init.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/lib/plugins/jquery.flot.orderBars.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-ordered.init.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/lib/jquery.flot.pie.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-donut.init.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-stacked.init.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-pie.init.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-bars-horizontal.init.js')
+            script(src='/default/assets/components/modules/admin/charts/flot/assets/custom/js/flotchart-autoupdating.init.js')
+            script(src='/default/assets/components/core/js/core.init.js')
+
+

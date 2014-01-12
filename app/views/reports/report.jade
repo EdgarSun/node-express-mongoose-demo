@@ -1,0 +1,148 @@
+extends ../layout/report_default
+
+block content
+
+  .navbar.hidden-print.navbar-primary.box.main.navbar-default(role='navigation')
+    .container
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a#logo.animated.fadeInDown.pull-left(href='index.html?lang=en')
+          img.img-clean(src='/img/tcwa_logo.png', alt='', width='37')
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li.dropdown.dropdown-light.active
+            a.dropdown-toggle(href='', data-toggle='dropdown') Tema Wave 
+        .clearfix
+  // // END navbar
+  #menu-top.menu-top-inverse
+    .container
+      ul.main.pull-left
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown', href='')
+            i.fa.fa-fw.fa-cog
+            | Changelist : 521456
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='form_wizards.html?lang=en') Owner Name
+            li
+              a(href='form_elements.html?lang=en') Description 
+            li
+              a(href='form_validator.html?lang=en') Create Date
+  .layout-app
+    .container
+      // row-app
+      .row.row-app
+        // col
+        .col-md-10.col-sm-9
+          // col-separator.box
+          .col-separator.col-unscrollable.box
+            // col-table
+            .col-table
+              h4.innerAll.margin-none.border-bottom Analyser
+              .col-table-row
+                  .innerAll.border-bottom
+                    h5 Owner Name &nbsp
+                      span edgar
+                  .innerAll.border-bottom
+                    h5 Description &nbsp
+                      span test test
+              // col-table-row
+              .col-table-row
+                // col-app
+                .col-app.col-unscrollable
+                  // col-app
+                  .col-app
+                    .innerAll
+                      // Widget
+                      .row
+                        .widget.widget-heading-simple.widget-body-gray
+                          // Widget heading
+                          .widget-head
+                            h4.heading General
+                          // // Widget heading END
+                          .widget-body
+                            // Simple Chart
+                            #chart_counts.flotchart-holder
+                      // // Widget END
+                      //- // Widget
+                      //- .widget.widget-heading-simple.widget-body-gray
+                      //-   // Widget heading
+                      //-   .widget-head
+                      //-     h4.heading File Size
+                      //-   // // Widget heading END
+                      //-   .widget-body
+                      //-     // Stacked bars Chart
+                      //-     #chart_stacked_bars.flotchart-holder
+                      //- // // Widget END
+                      // Widget
+                      .row
+                        .widget.widget-heading-simple.widget-body-white
+                          // Widget heading
+                          .widget-head
+                            h4.heading Duplicated Assets
+                          // // Widget heading END
+                          .widget-body
+                            // Chart with lines and fill with no points
+                            #chart_lines_fill_nopoints.flotchart-holder
+                      // // Widget END
+                      //- // Widget
+                      //- .widget.widget-heading-simple.widget-body-gray
+                      //-   // Widget heading
+                      //-   .widget-head
+                      //-     h4.heading Ordered bars chart
+                      //-   // // Widget heading END
+                      //-   .widget-body
+                      //-     // Ordered bars Chart
+                      //-     #chart_ordered_bars.flotchart-holder
+                      //- // // Widget END
+
+                      
+                      .row
+                        .col-md-4
+                          // Widget
+                          .widget.widget-heading-simple.widget-body-white
+                            // Widget heading
+                            .widget-head
+                              h4.heading Donut chart
+                            // // Widget heading END
+                            .widget-body
+                              // Donut Chart
+                              #chart_donut.flotchart-holder
+                          // // Widget END
+
+                        .col-md-4
+                          // Widget
+                          .widget.widget-heading-simple.widget-body-white
+                            // Widget heading
+                            .widget-head
+                              h4.heading Pie chart
+                            // // Widget heading END
+                            .widget-body
+                              // Pie Chart
+                              #chart_pie.flotchart-holder
+                          // // Widget END
+
+                      //- // Widget
+                      //- .widget.widget-heading-simple.widget-body-gray
+                      //-   // Widget heading
+                      //-   .widget-head
+                      //-     h4.heading Horizontal bars chart
+                      //-   // // Widget heading END
+                      //-   .widget-body
+                      //-     // Horizontal Bars Chart
+                      //-     #chart_horizontal_bars.flotchart-holder
+                      //- // // Widget END
+
+                    // // Widget END
+                // // END col-app
+              // // END col-app.col-unscrollable
+            // // END col-table-row
+          // // END col-table
+        // // END col-separator.box
+      // // END col
+    // // END row-app

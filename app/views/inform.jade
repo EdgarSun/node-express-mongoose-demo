@@ -1,0 +1,20 @@
+extends layout/sp_default
+
+block content
+    .layout-app
+        .row.row-app
+            .col-separator.col-unscrollable.box
+                .col-table
+                    .col-table-row
+                        .col-app.col-unscrollable
+                            .col-app
+                                .login.text-center
+                                    .placeholder.text-center
+                                        i.fa.fa-gamepad
+                                    .col-md-8.col-md-offset-2.text-center
+                                        .center.innerTB
+                                            h2 #{title}
+                                            p #{content}
+                                        .row-top-3
+                                            a.btn.col-md-6.col-md-offset-3.btn-info(href="/signup")
+                                                | Go to check my email

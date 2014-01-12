@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7 app"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8 app"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9 app"> <![endif]-->
+<!--[if gt IE 8]> <html class="ie app"> <![endif]-->
+<!--[if !IE]><!--><html class=""><!-- <![endif]-->
+
+include ../include/head
+
+block head_css
+    link(rel="stylesheet", href="/default/assets/css/docs/module.examples.page.widget-progress.min.css")
+    link(rel="stylesheet", href="/default/assets/css/admin/module.admin.page.index.sidebar_type.discover.min.css")
+    link(rel="stylesheet", href="/default/assets/css/docs/module.examples.page.widget-stats-2-1.min.css")
+    
+block head_less
+    link(rel="stylesheet/less", href="/less/styles.less")
+block head_script
+    include ../include/head_script
+
+body
+    .container-fluid.menu-hidden
+        #menu.hidden-print.hidden-xs
+            #sidebar-discover-wrapper
+                #logoWrapper
+                    a#logo.animated.fadeInDown(href="/")
+                        img(src="/default/assets/images/logo/app-logo-style-default.png")
+                ul.list-unstyled
+                    li.active
+                        a.glyphicons.cardio(href="/")
+                            i
+                            span Activity
+                    li
+                        a(href="/")
+                            span.badge.pull-right.badge-primary 8
+                            i.fa.fa-envelope
+                            span Messages
+        #menu_kis.hidden-print
+            div
+                ul.list-unstyled
+                    li
+                        a.glyphicons.globe(href="/")
+                            i
+                            span Social
+                    li
+                        a.glyphicons.home(href="/")
+                            i
+                            span Estate
+        #content
+
+            include ../include/top
+            .layout-app
+                .row.row-app.margin-none
+                    .col-md-12
+                        .col-separator.col-separator-first.border-none
+                            .col-table
+                                .col-table-row
+                                    .col-app
+                                        block content
+            include ../include/bottom
+
+    include ../include/foot
+        block foot_script
+            script(src="/default/assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/blueimp-gallery.min.js")
+            script(src="/default/assets/components/modules/admin/gallery/blueimp-gallery/assets/lib/js/jquery.blueimp-gallery.min.js")
+            script(src="/default/assets/components/modules/admin/charts/easy-pie/assets/lib/js/jquery.easy-pie-chart.js")
+            script(src="/default/assets/components/modules/admin/charts/easy-pie/assets/custom/easy-pie.init.js")
+            script(src="/default/assets/components/helpers/themer/assets/plugins/cookie/jquery.cookie.js")
+            script(src="/default/assets/components/core/js/core.init.js")
+            script(src="/default/assets/components/plugins/slimscroll/jquery.slimscroll.js")
+            script(src="/default/assets/components/plugins/nicescroll/jquery.nicescroll.min.js")
+            script(src="/default/assets/components/modules/admin/widgets/widget-scrollable/assets/js/widget-scrollable.init.js")
+
+            script(src='/lib/js/tiberius.main.js')
+
+            script(src='/lib/dart/packages/browser/dart.js')
+            script(src='/lib/dart/packages/browser/interop.js')
+            script(src='/lib/dart/tiberius.main.dart.js')
+
+
